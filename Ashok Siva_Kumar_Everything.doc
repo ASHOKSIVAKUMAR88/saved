@@ -1,0 +1,72 @@
+﻿Install Chrome on Ubuntu
+If you are running a 64 Bit system, then use this:
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+then:
+sudo dpkg -i ./google-chrome*.deb
+and to finish:
+sudo apt-get install -f
+
+How to free Ram Memory in Ubuntu:
+Checking Used Memory and Free Memory
+To check the current amount of used and free memory in the system in real time, use the following command:
+watch -n 3 free -m
+Output:
+
+
+
+Or you can also try the following command to see much detailed information about current memory usage:
+watch -n 3 cat /proc/meminfo
+Output:
+
+
+
+Above command will provide plenty of information including-
+MemTotal : 1024792 kB
+MemFree : 434168 kB
+Buffers : 66672 kB
+Cached : 283148 kB
+SwapCached : 0 kB
+Active : 197488 kB
+Inactive : 2264 kB and much more..
+
+Releasing the Memory
+1. Freeing Up the Page Cache
+echo 1 > /proc/sys/vm/drop_caches
+
+2. Freeing Up the Dentries and Inodes
+echo 2 > /proc/sys/vm/drop_caches
+
+3. Freeing Up the Page Cache, Dentries and Inodes
+echo 3 > /proc/sys/vm/drop_caches
+
+4. Flushing the File System Buffers
+sync
+
+Run sync every now and them in the terminal
+
+TO INSTALL ADB TOOL
+sudo apt-get install android-tools-adb
+
+TO INSTALL ADB FASTBOOT	
+sudo apt-get install android-tools-fastboot
+
+
+
+
+
+
+
+
+
+
+
+Android kernel flashing backup and restore 
+
+Youtube Links
+
+https://www.youtube.com/watch?v=36cihz4l-vk
+
+how to edit android kernel backup
+
+I want to modify drivers in the android kernel which is backup-ed via Nandroid Backup for the current kernel ROM in the mobile. 
+Any Startup suggestions to edit the current ROM (backup) to modify or track the drivers flow in the kernel ROM from low level to high level in such a way to log every operation via displaying messages.
